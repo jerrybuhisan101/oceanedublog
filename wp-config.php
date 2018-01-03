@@ -18,9 +18,12 @@
  * @package WordPress
  */
 
+/* Multisite */
+define( 'WP_ALLOW_MULTISITE', true );
+
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'ocean_blog');
+define('DB_NAME', 'oceanedudb');
 
 /** MySQL database username */
 define('DB_USER', 'admin');
@@ -46,16 +49,28 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         's:,SV6C*<qy}nDm7RHNhifY#-&)ao6MT*B#1H3LckQ.at9M2amBgGT6^qC]{ ?Yq');
-define('SECURE_AUTH_KEY',  'z@F*WqVunAmA7? .5)rnks-}|Kuj!k9O1`.nc%|IeWX#Yf~=WxbYl}&HFzp*3_I[');
-define('LOGGED_IN_KEY',    ',5zRDV#m~-S[%i8UwX0{KSBnfI&n5KKEs^b+Y:+%hP;8H<yK[BIBs3N&:%jWhz@X');
-define('NONCE_KEY',        '{AN0D$,k5(Td[kV{M812,nT~1qjgD0g#Ng5bP^6 .Kr/c~Q3Xp*BxE[GA@fl~+3O');
-define('AUTH_SALT',        '!,__9eJWsRX>M_gW3tf)  VDN{0X]$@[^Ft59-Mw~kKo.]iHZ<I)*3cEV>!z]lN2');
-define('SECURE_AUTH_SALT', 'i6$h2RxlZph/{: xp+yX8w)bHW6:zV1.H$gUGK8u@p#t|{C97vwRB46^N2TQmlhM');
-define('LOGGED_IN_SALT',   '~;_8}P-N{)rorjHg5Ekfji$^wSQ@J]I#C}S7/Q`),4;h~l4K,n9oyGqG2-zXWpk;');
-define('NONCE_SALT',       'HK 9q.RnE+Q !*$eFWMrhwBM#Wytb{^qAcT^mNFMf)<*SgZ*(IlS{*?%{kf y%b-');
+define('AUTH_KEY',         'm=YWB4Jx<tsyrpiZ`.eIvMz(^2bo-N*s]q%w.qtS8M0[ntpaK_QlUu:zeI`ilkYf');
+define('SECURE_AUTH_KEY',  'Kx)?4HQY9~^uL?pZ[rikd@hBS15<,%*N!-NS4vNaC}w^:VW,>?p>83d,{EP=<zf%');
+define('LOGGED_IN_KEY',    ' #7#*d8oT|*qQd09|c*j6(QTG4O;OC4Ww.vl#~}>|cjy}:QiseHBOIl)$A)~=3W}');
+define('NONCE_KEY',        '4jrQiSc`v@=d76g#.r(VsS:T~NwU]+Z%S[0lZ?mS~v]:uov^SM:#hizJv0DUmxA^');
+define('AUTH_SALT',        't63eo0d0TtT *LK2$xnnV;,+w*~x3;hUxWlk 9HtEV}ePvygs5t64n:k?BJH (4P');
+define('SECURE_AUTH_SALT', 'M`^D|JU>e0S3y}Ks6Do(G 0_:ft]+MXX&:`R6}^,~PFf8~*f`QM!}I*VUMrQ#YJ=');
+define('LOGGED_IN_SALT',   '>T?S$W7g=I@qin%k*o6Az;unMYEG?S{tj@fdA0=wrOJjt7z9b#q24.T[1Y_M^EoP');
+define('NONCE_SALT',       '~M6BBiwEy+`$% Q :qG(,3?LUiiJO-C|6#vzBy.~vb*(OMZ.Zq^<_8Rv=-Ml`:H2');
 
 /**#@-*/
+
+// MULTISITE START CONFIGURATION
+
+define('MULTISITE', true);
+define('SUBDOMAIN_INSTALL', false);
+define('DOMAIN_CURRENT_SITE', 'localhost');
+define('PATH_CURRENT_SITE', '/oceanedublog/');
+define('SITE_ID_CURRENT_SITE', 1);
+define('BLOG_ID_CURRENT_SITE', 1);
+
+// END OF MULTISITE CONFIGURATION
+
 
 /**
  * WordPress Database Table prefix.
@@ -87,3 +102,10 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
+
+// Multisite Start
+
+
+
+// End of Multisite
